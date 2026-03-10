@@ -172,3 +172,5 @@ console.log(pendentes[0].titulo)
 console.log(pendentes[1].titulo) // exibido titulo da array
 
 console.log("_______________________________");
+
+
