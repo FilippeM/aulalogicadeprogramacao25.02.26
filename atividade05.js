@@ -212,12 +212,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let aluno01 = {
-    nome: lerTeclado.question("Informe o nome do primeiro aluno: "),
-    notas: lerTeclado.questionInt("Informe a primeira nota: "),
-    notas: lerTeclado.questionInt("Informe a segunda nota: "),
-    notas: lerTeclado.questionInt("Informe a terceira nota: ")
-}
+// let aluno01 = {
+//     nome: lerTeclado.question("Informe o nome do primeiro aluno: "),
+//     notas: [lerTeclado.questionInt("Informe a primeira nota: "),lerTeclado.questionInt("Informe a segunda nota: "),lerTeclado.questionInt("Informe a terceira nota: ")]
+// }
+// let aluno02 = {
+//     nome: lerTeclado.question("Informe o nome do segundo aluno: "),
+//     notas: [lerTeclado.questionInt("Informe a primeira nota: "),lerTeclado.questionInt("Informe a segunda nota: "),lerTeclado.questionInt("Informe a terceira nota: ")]
+// }
+// let aluno03 = {
+//     nome: lerTeclado.question("Informe o nome do terceiro aluno: "),
+//     notas: [lerTeclado.questionInt("Informe a primeira nota: "),lerTeclado.questionInt("Informe a segunda nota: "),lerTeclado.questionInt("Informe a terceira nota: ")]
+// }
+
+// let turma = [aluno01,aluno02,aluno03]
+
+// console.table(turma)
+
+// console.log(turma[1].nome,turma[1].notas[0])
+// console.log(turma[2].nome,turma[2].notas[1])
+// console.log(turma[0].nome,turma[0].notas[2])
 
 
 
@@ -241,8 +255,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let nomedoproduto = lerTeclado.question("Informe o nome do produto: ")
+// let categoriaproduto = lerTeclado.question("Informe a categoria do produto: ")
+// let preco = lerTeclado.questionFloat("Informe o preco do produto: ")
+// let qtdEmEstoque = lerTeclado.questionInt("Informe a quantidade do produto: ")
+// let disponibilidadeVenda = lerTeclado.keyInYN("O produto esta disponivel para venda? {S/N}")
 
-console.log("_______________________________");
+// let produto = {
+//     nome: nomedoproduto,
+//     categoria: categoriaproduto,
+//     preco: preco,
+//     quantidade: qtdEmEstoque,
+//     disponivel: disponibilidadeVenda
+// }
+
+// console.table(produto)
+
+// console.log(`Produto: ${produto.nome} | Categoria: ${produto.categoria} | Estoque: ${produto.quantidade} UN`)
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -256,3 +287,24 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+
+// let medicamento01 = {
+//     nome: lerTeclado.question("Informe o nome do primeiro medicamento: "),
+//     preco: lerTeclado.questionFloat("Informe o preco do medicamento: "),
+//     emEstoque: lerTeclado.keyInYN("Ha medicamento no estoque? {S/N}")
+
+// }
+
+// let medicamento02 = {
+//     nome: lerTeclado.question("Informe o nome do segundo medicamento: "),
+//     preco: lerTeclado.questionFloat("Informe o preco do medicamento: "),
+//     emEstoque: lerTeclado.keyInYN("Ha medicamento no estoque? {S/N}")
+
+// }
+
+// let estoqueFarmacia = [medicamento01,medicamento02]
+
+// console.table(estoqueFarmacia)
+
+// console.log(estoqueFarmacia[1].nome,estoqueFarmacia[1].preco)
+// console.log(estoqueFarmacia[0].nome,estoqueFarmacia[0].emEstoque)
