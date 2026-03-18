@@ -206,13 +206,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let notas = [
-    lerTeclado.questionFloat("Informe a primeira nota: "),
-    lerTeclado.questionFloat("Informe a segunda nota: "),
-    lerTeclado.questionFloat("Informe a terceira nota: "),
-]
+// let notasAulas = [
+//     lerTeclado.questionFloat("Informe a primeira nota: "),
+//     lerTeclado.questionFloat("Informe a segunda nota: "),
+//     lerTeclado.questionFloat("Informe a terceira nota: "),
+// ]
 
-let media = notas[0] + notas[1] + notas[2] /notas.length()
+// let media = notasAulas[0] + notasAulas[1] + notasAulas[2] / notasAulas.length
+
+// console.log(`Nota 1: ${notasAulas[0]} | Nota 2: ${notasAulas[1]} | Nota 3: ${notasAulas[2]}`)
+// console.log(`Média: ${media.toFixed(2)}`)
 
 
 
@@ -233,6 +236,16 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let valorTotaldaCompra = lerTeclado.questionFloat("Informe o valor total da compra: ")
+// let valorEntreguePeloCliente = lerTeclado.questionFloat("Informe o valor entregue pelo cliente: ")
+
+// let troco = valorEntreguePeloCliente - valorTotaldaCompra
+
+// console.log(`
+// Total da compra:  R$ ${valorTotaldaCompra.toFixed(2)}
+// Valor entregue:   R$ ${valorEntreguePeloCliente.toFixed(2)}
+// Troco:            R$ ${troco.toFixed(2)}`)
+
 
 console.log("_______________________________");
 
@@ -249,6 +262,15 @@ let idades = [15, 22, 30, 18, 25];
 
 // → Seu código aqui:
 
+// let totalPrecos = precos[0] + precos[1] + precos[2] + precos[3]
+// console.log(totalPrecos.toFixed(2))
+
+// let mediaPrecos = (precos[0] + precos[1] + precos[2] + precos[3]) / notas.length
+// console.log(mediaPrecos.toFixed(2))
+
+// console.log(Math.max(idades[0],idades[1],idades[2],idades[3],idades[4]))
+// console.log(Math.min(idades[0],idades[1],idades[2],idades[3],idades[4]))
+
 
 console.log("_______________________________");
 
@@ -259,7 +281,7 @@ console.log("_______________________________");
 // Dado o objeto turma:
 let turma = {
   aluno1: {
-    nome: "João",
+    nome: "Joao",
     notas: []
   },
   aluno2: {
@@ -279,5 +301,73 @@ let turma = {
 
 // → Seu código aqui:
 
+// turma.aluno1.notas.push(lerTeclado.questionFloat(`Digite a primeira nota de ${turma.aluno1.nome}: `))
+// turma.aluno1.notas.push(lerTeclado.questionFloat(`Digite a segunda nota de ${turma.aluno1.nome}: `))
+// turma.aluno1.notas.push(lerTeclado.questionFloat(`Digite a terceira nota de ${turma.aluno1.nome}: `))
+
+// turma.aluno2.notas.push(lerTeclado.questionFloat(`Digite a primeira nota de ${turma.aluno2.nome}: `))
+// turma.aluno2.notas.push(lerTeclado.questionFloat(`Digite a segunda nota de ${turma.aluno2.nome}: `))
+// turma.aluno2.notas.push(lerTeclado.questionFloat(`Digite a terceira nota de ${turma.aluno2.nome}: `))
+
+// turma.aluno3.notas.push(lerTeclado.questionFloat(`Digite a primeira nota de ${turma.aluno3.nome}: `))
+// turma.aluno3.notas.push(lerTeclado.questionFloat(`Digite a segunda nota de ${turma.aluno3.nome}: `))
+// turma.aluno3.notas.push(lerTeclado.questionFloat(`Digite a terceira nota de ${turma.aluno3.nome}: `))
+
+// let mediaAluno1 = (turma.aluno1.notas[0] + turma.aluno1.notas[1] + turma.aluno1.notas[2]) / turma.aluno1.notas.length
+// console.log(`A media de ${turma.aluno1.nome} é ${mediaAluno1}`)
+
+// let mediaAluno2 = (turma.aluno2.notas[0] + turma.aluno2.notas[1] + turma.aluno2.notas[2]) / turma.aluno2.notas.length
+// console.log(`A media de ${turma.aluno2.nome} é ${mediaAluno2}`)
+
+// let mediaAluno3 = (turma.aluno3.notas[0] + turma.aluno3.notas[1] + turma.aluno3.notas[2]) / turma.aluno3.notas.length
+// console.log(`A media de ${turma.aluno3.nome} é ${mediaAluno3}`)
+
+// let qtdAlunos = Object.keys(turma).length
+// let mediaGeralTurma = (mediaAluno1 + mediaAluno2 + mediaAluno3) / qtdAlunos
+// console.log(qtdAlunos)
+// console.log(`A media geral da turma foi: ${mediaGeralTurma}`)
+
+
+// console.log(`A maior nota de ${turma.aluno1.nome} foi: ${Math.max(turma.aluno1.notas[0],turma.aluno1.notas[1],turma.aluno1.notas[2])}`)
+// console.log(`A menor nota de ${turma.aluno1.nome} foi: ${Math.min(turma.aluno1.notas[0],turma.aluno1.notas[1],turma.aluno1.notas[2])}`)
+
+// console.log(`A maior nota de ${turma.aluno2.nome} foi: ${Math.max(turma.aluno2.notas[0],turma.aluno2.notas[1],turma.aluno2.notas[2])}`)
+// console.log(`A menor nota de ${turma.aluno2.nome} foi: ${Math.min(turma.aluno2.notas[0],turma.aluno2.notas[1],turma.aluno2.notas[2])}`)
+
+// console.log(`A maior nota de ${turma.aluno3.nome} foi: ${Math.max(turma.aluno3.notas[0],turma.aluno3.notas[1],turma.aluno3.notas[2])}`)
+// console.log(`A menor nota de ${turma.aluno3.nome} foi: ${Math.min(turma.aluno3.notas[0],turma.aluno3.notas[1],turma.aluno3.notas[2])}`)
+
+// let todasNotasDaTurma = [
+//   turma.aluno1.notas[0],
+//   turma.aluno1.notas[1],
+//   turma.aluno1.notas[2],
+//   turma.aluno2.notas[0],
+//   turma.aluno2.notas[1],
+//   turma.aluno2.notas[2],
+//   turma.aluno3.notas[0],
+//   turma.aluno3.notas[1],
+//   turma.aluno3.notas[2],
+// ]
+// console.log(`A maior nota da turma foi: ${Math.max(todasNotasDaTurma[0],
+//   todasNotasDaTurma[1],
+//   todasNotasDaTurma[2],
+//   todasNotasDaTurma[3],
+//   todasNotasDaTurma[4],
+//   todasNotasDaTurma[5],
+//   todasNotasDaTurma[6],
+//   todasNotasDaTurma[7],
+//   todasNotasDaTurma[8])
+// }`)
+
+// console.log(`A menor nota da turma foi: ${Math.min(todasNotasDaTurma[0],
+//   todasNotasDaTurma[1],
+//   todasNotasDaTurma[2],
+//   todasNotasDaTurma[3],
+//   todasNotasDaTurma[4],
+//   todasNotasDaTurma[5],
+//   todasNotasDaTurma[6],
+//   todasNotasDaTurma[7],
+//   todasNotasDaTurma[8])
+// }`)
 
 console.log("_______________________________");
