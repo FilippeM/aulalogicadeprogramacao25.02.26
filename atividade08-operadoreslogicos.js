@@ -244,6 +244,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let usuario = {
+//     idade: lerTeclado.questionInt("Informe sua idade: "),
+//     possuiIngresso: lerTeclado.keyInYN("Voce possui ingresso? [S/N]"),
+//     associado: lerTeclado.keyInYN("Voce e associado do clube? [S/N]")
+// }
+
+// let verificacaoUsuario = {
+//     podeEntrarNormal: (usuario.idade >= 18 && usuario.possuiIngresso) || usuario.associado,
+//     podeEntrarSocio: usuario.possuiIngresso && usuario.associado,
+//     precisaAcompanhante: usuario.idade < 18,
+//     naoPodeEntrar: !usuario.possuiIngresso && !usuario.associado
+// }
+
+// console.log(`Usuario pode entrar normal? ${verificacaoUsuario.podeEntrarNormal? "Acesso liberado" : "Acesso negado"} | Usuario esta com associacao em dia? ${verificacaoUsuario.podeEntrarSocio? "Entrada liberada" : "Entrada negada"}`)
+
 
 
 
