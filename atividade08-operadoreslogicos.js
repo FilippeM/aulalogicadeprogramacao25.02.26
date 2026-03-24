@@ -281,6 +281,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let produto = {
+//     nome: lerTeclado.question("Digite o nome do produto: "),
+//     quantidadeEmEstoque: lerTeclado.questionInt("Digite a quantidade do produto no estoque: "),
+//     ativoEmSistema: lerTeclado.keyInYN("O produto esta ativo no sistema? [S/N]")
+// }
+
+// let temEstoque = produto.quantidadeEmEstoque > 0
+// let produtoDisponivel = temEstoque && produto.ativoEmSistema
+// let produtoIndisponivel = !temEstoque || !produto.ativoEmSistema
+
+// console.log(`Produto: ${produto.nome} | Quantidade: ${produto.quantidadeEmEstoque} | Ativo em sistema: ${produto.ativoEmSistema? "Sim" : "Nao"}`)
+// console.log(`Tem produto em estoque: ${temEstoque? "Sim" : "Nao"} | Produto Disponivel: ${produtoDisponivel? "Sim" : "Nao"} | Produto Indisponivel: ${produtoIndisponivel? "Sim" : "Nao"}`)
+
 
 console.log("_______________________________");
 
@@ -301,6 +314,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let usuario = {
+//     eAdministrador: lerTeclado.keyInYN("Voce e administrador? [S/N]"),
+//     estaLogado: lerTeclado.keyInYN("Voce esta logado no momento? [S/N]"),
+//     contaAtiva: lerTeclado.keyInYN("Sua conta esta ativa? [S/N]")
+// }
+
+// let acessoSistema = usuario.estaLogado && usuario.contaAtiva
+// let acessoAdmin = acessoSistema && usuario.eAdministrador
+// let acessoNegado = !usuario.estaLogado || !usuario.contaAtiva
+
+// console.log(`Status de acesso ao sistema do usuario: ${acessoSistema? "Acesso Liberado!" : "Acesso Negado"}`)
+// console.log(`Status de acesso de Administrador: ${acessoAdmin? "Acesso permitido" : "Acesso negado"}`)
+// console.log(`Status de acesso negado para o usuario: ${acessoNegado? "Acesso Negado Confirmado" : "Acesso normal"}`)
 
 console.log("_______________________________");
 
@@ -323,6 +349,20 @@ console.log("_______________________________");
 //    Caso contrário → "Usuário ou senha incorretos."
 
 // → Seu código aqui:
+
+// let credenciaisSistema = {
+//     usuario: "admin",
+//     senha: "1234"
+// }
+
+// let login = lerTeclado.question("Digite seu usuario: ")
+// let senha = lerTeclado.question("Digite sua senha: ")
+
+// let usuarioCorreto = login === credenciaisSistema.usuario
+// let senhaCorreta = senha === credenciaisSistema.senha
+// let loginValido = usuarioCorreto && senhaCorreta
+
+// console.log(`${loginValido? "Login realizado com sucesso!" : "Usuário ou senha incorretos"}`)
 
 
 console.log("_______________________________");

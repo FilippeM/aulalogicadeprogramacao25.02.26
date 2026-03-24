@@ -12,7 +12,7 @@
 //       não serão solicitados novamente.
 // ============================================================
 
-
+let lerTeclado = require('readline-sync')
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Comparando com == e ===
 // ------------------------------------------------------------
@@ -189,18 +189,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let primeiroNumero = lerTeclado.questionInt("Digite o primeiro numero: ")
-let segundoNumero = lerTeclado.questionInt("Digite o segundo numero: ")
+// let primeiroNumero = lerTeclado.questionInt("Digite o primeiro numero: ")
+// let segundoNumero = lerTeclado.questionInt("Digite o segundo numero: ")
 
-const primeiraResposta = primeiroNumero > segundoNumero
-const segundaResposta = primeiroNumero < segundoNumero
-const terceiraResposta = primeiroNumero === segundoNumero
-const quartaResposta = primeiroNumero >= segundoNumero
+// const primeiraResposta = primeiroNumero > segundoNumero
+// const segundaResposta = primeiroNumero < segundoNumero
+// const terceiraResposta = primeiroNumero === segundoNumero
+// const quartaResposta = primeiroNumero >= segundoNumero
 
-console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é maior que o segundo? ${primeiraResposta? "Sim" : "Não"}`)
-console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é menor que o segundo? ${segundaResposta? "Sim" : "Não"}`)
-console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é igual ao segundo? ${terceiraResposta? "Sim" : "Não"}`)
-console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é maior ou igual ao segundo? ${quartaResposta? "Sim" : "Não"}`)
+// console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é maior que o segundo? ${primeiraResposta? "Sim" : "Não"}`)
+// console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é menor que o segundo? ${segundaResposta? "Sim" : "Não"}`)
+// console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é igual ao segundo? ${terceiraResposta? "Sim" : "Não"}`)
+// console.log(`O primeiro número é: ${primeiroNumero} | o segundo número é: ${segundoNumero} | O primeiro numero é maior ou igual ao segundo? ${quartaResposta? "Sim" : "Não"}`)
 
 
 console.log("_______________________________");
@@ -219,6 +219,16 @@ console.log("_______________________________");
 //    "Item caro (> R$ <precoMaximo>)? : <esteItemEhCaro ? "Sim" : "Não">"
 
 // → Seu código aqui:
+
+// let preco = lerTeclado.questionFloat("Digite o preco do produto: ")
+// const precoMaximo = 100
+
+// let estaDentroDoOrcamento = preco <= precoMaximo
+// let esteItemEhCaro = preco > precoMaximo
+
+// console.log(`O preco do produto é: ${preco}`)
+// console.log(`Preco dentro do orçamento: ${estaDentroDoOrcamento? "Sim" : "Nao"} `)
+// console.log(`Item esta caro? ${esteItemEhCaro? "Sim" : "Nao"}`)
 
 
 console.log("_______________________________");
@@ -239,6 +249,32 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let pessoa1 = {
+//     nome: lerTeclado.question("Digite o nome da primeira pessoa: "),
+//     idadePessoa1: lerTeclado.questionInt("Informe a idade da primeira pessoa: ")
+// }
+
+// let pessoa2 = {
+//     nome: lerTeclado.question("Digite o nome da segunda pessoa: "),
+//     idadePessoa2: lerTeclado.questionInt("Informe a idade da segunda pessoa: ")
+// }
+
+// let cadastro = [
+//     pessoa1,
+//     pessoa2
+// ]
+
+// let comparacaoMaiorIdade = cadastro[0].idadePessoa1 > cadastro[1].idadePessoa2
+// let comparacaoIdadeIgual = cadastro[0].idadePessoa1 === cadastro[1].idadePessoa2
+// let comparacaoMaiorIdadeP1 = cadastro[0].idadePessoa1 >= 18
+// let comparacaoMaiorIdadeP2 = cadastro[1].idadePessoa2 >= 18
+
+// console.log(`${pessoa1.nome} tem ${pessoa1.idadePessoa1} anos de idade e a idade dela é ${comparacaoMaiorIdade? "maior" : "menor"} do que a de ${pessoa2.nome} que tem ${pessoa2.idadePessoa2} anos de idade.`)
+// console.log(`${pessoa1.nome} tem ${pessoa1.idadePessoa1} anos de idade e a idade dela é ${comparacaoIdadeIgual? "igual" : "diferente"} do que a de ${pessoa2.nome} que tem ${pessoa2.idadePessoa2} anos de idade.`)
+// console.log(`A idade de ${pessoa1.nome} é ${pessoa1.idadePessoa1} e ela é ${comparacaoMaiorIdadeP1? "maior de idade" : "menor de idade"}`)
+// console.log(`A idade de ${pessoa2.nome} é ${pessoa2.idadePessoa2} e ela é ${comparacaoMaiorIdadeP2? "maior de idade" : "menor de idade"}`)
+
+
 
 console.log("_______________________________");
 
@@ -252,6 +288,38 @@ console.log("_______________________________");
 // c) Compare e exiba no console, qual aluno obteve a primeira maior nota, a segunda e a terceira.
 //    Exemplo: `Aluno com primeira maior nota: ${nota1aluno1 > nota1aluno2 ? nomeAluno1 : nomeAluno2}`
 // → Seu código aqui:
+
+// let aluno01 = {
+//     nome: lerTeclado.question("Digite o nome do primeiro aluno: "),
+//     notas: [lerTeclado.questionFloat("Digite a primeira nota: "),
+//     lerTeclado.questionFloat("Digite a segunda nota: "),
+//     lerTeclado.questionFloat("Digite a terceira nota: ")
+//     ]
+// }
+
+// let aluno02 = {
+//     nome: lerTeclado.question("Digite o nome do segundo aluno: "),
+//     notas: [lerTeclado.questionFloat("Digite a primeira nota: "),
+//     lerTeclado.questionFloat("Digite a segunda nota: "),
+//     lerTeclado.questionFloat("Digite a terceira nota: ")
+//     ]
+// }
+
+// let alunos = [aluno01,aluno02]
+
+// let mediaAluno1 = (aluno01.notas[0] + aluno01.notas[1] + aluno01.notas[2]) / aluno01.notas.length
+// let mediaAluno2 = (aluno02.notas[0] + aluno02.notas[1] + aluno02.notas[2]) / aluno02.notas.length
+// let maiorMedia = mediaAluno1 > mediaAluno2
+
+// console.log(`A media maior foi de ${maiorMedia? alunos[0].nome : alunos[1].nome}`)
+
+// let primeiraMaiorNota = aluno01.notas[0] > aluno02.notas[0]
+// let segundaMaiorNota = aluno01.notas[1] > aluno02.notas[1]
+// let terceiraMaiorNota = aluno01.notas[2] > aluno02.notas[2]
+
+// console.log(`Aluno com primeira maior nota: ${primeiraMaiorNota? alunos[0].nome : alunos[1].nome}`)
+// console.log(`Aluno com segunda maior nota: ${segundaMaiorNota? alunos[0].nome : alunos[1].nome}`)
+// console.log(`Aluno com terceira maior nota: ${terceiraMaiorNota? alunos[0].nome : alunos[1].nome}`)
 
 
 console.log("_______________________________");
