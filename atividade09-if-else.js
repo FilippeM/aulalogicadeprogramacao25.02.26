@@ -302,12 +302,43 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let calculo = {
-    numeroA: lerTeclado.questionFloat("Digite o primeiro numero"),
-    numeroB: lerTeclado.questionFloat("Digite o segundo numero: "),
-    operacao: lerTeclado.questionInt("Escolha a operacao: 1 – Soma | 2 – Subtração | 3 – Multiplicação | 4 – Divisão "),
-    simbolo: ""
-}
+// let calculo = {
+//     numeroA: lerTeclado.questionFloat("Digite o primeiro numero: "),
+//     numeroB: lerTeclado.questionFloat("Digite o segundo numero: "),
+//     operacao: lerTeclado.questionInt("Escolha a operacao: 1 Soma | 2 Subtracao | 3 Multiplicacao | 4 Divisao:  "),
+//     simbolo: ""
+// }
+// let resultado
+
+// if(calculo.operacao > 4 || calculo.operacao < 1){
+//     console.log("valor invalido");
+// } else {
+//     if(calculo.operacao === 1){
+//         resultado = calculo.numeroA + calculo.numeroB;
+//         calculo.simbolo = "+"
+//     }else if(calculo.operacao === 2){
+//         resultado = calculo.numeroA - calculo.numeroB;
+//         calculo.simbolo = "-"
+//     }else if(calculo.operacao === 3){
+//         resultado = calculo.numeroA * calculo.numeroB;
+//         calculo.simbolo = "*"
+//     }else {
+//         if(calculo.numeroB === 0){
+//             console.log("Erro! esta operacao nao pode ser realizada")
+//         }else{
+//             resultado = calculo.numeroA / calculo.numeroB;
+//             calculo.simbolo = "/"   
+//         } 
+//     } 
+//     if (calculo.simbolo !== "") {
+//         console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado} `)
+//     }
+// }
+
+
+
+
+
 
 
 console.log("_______________________________");
