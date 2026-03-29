@@ -89,31 +89,52 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let conta = {
-    titular: "Maria",
-    saldo: 1500,
-    bloqueada: false,
-    senha: 1234
-}
+// let conta = {
+//     titular: "Maria",
+//     saldo: 1500,
+//     bloqueada: false,
+//     senha: 1234
+// }
 
-let senhaInput = lerTeclado.questionInt("Digite sua senha: ")
-let opcaoSaqueDeposito
-let valorSaque
-let valorDeposito
+// let senhaInput = lerTeclado.questionInt("Digite sua senha: ")
+// let opcaoSaqueDeposito
+// let valor
 
-if(senhaInput !== conta.senha){
-    console.log("Senha incorreta. Operação cancelada.")
-}else{
-    opcaoSaqueDeposito= lerTeclado.questionInt("Digite 1 para saque | Digite 2 para deposito:   ")
-}
 
-if(opcaoSaqueDeposito > 2 || opcaoSaqueDeposito < 1){
-    console.log("Opcao Invalida")
-}else if(opcaoSaqueDeposito === 1){
-    valorSaque = lerTeclado.questionFloat("Qual valor deseja sacar? ")
-}
+// if(senhaInput !== conta.senha){
+//     console.log("Senha incorreta. Operação cancelada.")
+// }else{
+//     opcaoSaqueDeposito = lerTeclado.questionInt("Digite 1 para saque | Digite 2 para deposito:   ")
+//         if(opcaoSaqueDeposito > 2 || opcaoSaqueDeposito < 1){
+//         console.log("Opcao Invalida")
+//         }else{
+//             valor = lerTeclado.questionFloat("Digite o valor: ");
+//         }
+// }
 
-  
+// if(opcaoSaqueDeposito === 1){
+//     if(conta.bloqueada){
+//         console.log("Conta bloqueada. Procure uma agência.")
+//     }else if(valor <= 0){
+//         console.log("Valor inválido.");
+//     }else if (valor > conta.saldo) {
+//         console.log(`Saldo insuficiente. Saldo atual: R$ ${conta.saldo}`);
+//     }else {conta.saldo -= valor;
+//             console.log(`Saque de R$ ${valor} realizado. Novo saldo: R$ ${conta.saldo}`);
+//     }
+// }
+
+// if(opcaoSaqueDeposito === 2){
+//     if(conta.bloqueada){
+//         console.log("Conta bloqueada. Procure uma agência.");    
+//     }else if(valor <= 0){
+//         console.log("Valor inválido.");
+//     }else{
+//         conta.saldo += valor
+//         console.log(`Depósito de R$ ${valor} realizado. Novo saldo: R$ ${conta.saldo}`)
+//     }
+
+// }
 
 
 
@@ -148,6 +169,33 @@ console.log("_______________________________");
 //    - Não pode → "<nome> não pode assistir. Classificação: <classificação> anos."
 
 // → Seu código aqui:
+
+console.log("========================================================")
+console.log("Classificação indicativa:")
+console.log("========================================================")
+console.log("- 0 Livre          → todas as idades")
+console.log("- 10 anos        → 10 anos ou mais")
+console.log("- 12 anos        → 12 anos ou mais")
+console.log("- 14 anos        → 14 anos ou mais")
+console.log("- 16 anos        → 16 anos ou mais")
+console.log("- 18 anos        → 18 anos ou mais")
+console.log("========================================================")
+
+let cinema ={
+    nomeEspectador: lerTeclado.question("Digite seu nome: "),
+    idade: lerTeclado.questionInt("Digite sua idade: "),
+    classificacao: lerTeclado.questionInt("Digite qual a classificacao de filme desejada: ")
+}
+
+if(cinema.classificacao === 0){
+    console.log(`${cinema.nomeEspectador}, pode assistir! Boa sessão!`)
+}else if(cinema.classificacao !== 0 || cinema.classificacao !== 18 || cinema.classificacao !== 16 || cinema.classificacao !== 14 || cinema.classificacao !== 12 || cinema.classificacao !== 10 ){
+    console.log(`${cinema.nomeEspectador}, esta opção é invalida!`)    
+}else if(cinema.classificacao <= cinema.idade){
+    console.log(`${cinema.nomeEspectador}, pode assistir! Boa sessão!`)    
+}else{
+    console.log(`${cinema.nomeEspectador}, não pode assistir. Classificação não permitida para sua idade!`)
+}
 
 
 console.log("_______________________________");
