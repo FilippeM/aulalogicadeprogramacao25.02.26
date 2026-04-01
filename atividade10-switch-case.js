@@ -438,15 +438,52 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let loja = {
-    nome: "Techshop",
-    saldo: 0
-}
+// let loja = {
+//     nome: "Techshop",
+//     saldo: 0
+// }
 
-console.log("========== MENU ==========")
-console.log(`\n1 Ver produtos \n2 Comprar \n3 Ver Carrinho \n4 Sair`)
+// while(true){
+//     console.log("========== MENU ==========")
+//     console.log(`\n1 Ver produtos \n2 Comprar \n3 Ver Carrinho \n4 Sair`)
 
-let opcaoMenu = lerTeclado.questionInt("Digite a opcao desejada: ")
+//     let opcaoMenu = lerTeclado.questionInt("Digite a opcao desejada: ")
+//     let produtos;
+//     let nomeProdutoEscolhido;
+//     let precoProdutoEscolhido;
+
+//     switch(opcaoMenu){
+//         case 1:
+//             produtos = [{
+//                 id: 1,
+//                 produto: "mouse",
+//                 preco: 600},
+//                 {id: 2,
+//                 produto: "teclado",
+//                 preco: 700},{
+//                 id: 3,
+//                 produto: "Fone",
+//                 preco: 1200}
+//             ]
+//             console.table(produtos)
+//             break;
+//         case 2:
+//             nomeProdutoEscolhido = lerTeclado.question("Qual produto deseja comprar: ")
+//             precoProdutoEscolhido = lerTeclado.questionFloat("Digite o preco do produto: ")
+//             loja.saldo += precoProdutoEscolhido
+//             console.log(`${nomeProdutoEscolhido} adicionado ao carrinho!`) 
+//             break;
+//         case 3:
+//             console.log(`Saldo atual do seu carrinho: ${loja.saldo} `)
+//             break;
+//         case 4:
+//             console.log("Obrigado por visitar a TechShop!")
+//             break;
+//         default:
+//             console.log("Opção inválida.")    
+//     }
+// }
+
 
 
 console.log("_______________________________");
