@@ -21,7 +21,7 @@ let lerTeclado = require('readline-sync')
 // console.log("Contagem concluida!")
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -40,7 +40,7 @@ console.log("_______________________________");
 // console.log("Lancamento!🚀")
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -60,7 +60,7 @@ console.log("_______________________________");
 
 // console.log(`A quantidade de numeros pares é: ${cont}`)
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -82,7 +82,7 @@ console.log("_______________________________");
 
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -110,7 +110,7 @@ console.log("_______________________________");
 // }
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -143,7 +143,7 @@ console.log("_______________________________");
 
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -166,7 +166,7 @@ console.log("_______________________________");
 
 // console.log(`Total de cidades: ${qtd}`)
 
-console.log("_______________________________");
+// // console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -181,8 +181,26 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const temperaturas = [28, 15, 32, 9, 21, 37, 14, 25]
 
-console.log("_______________________________");
+// let maior = temperaturas[0];
+// let menor = temperaturas[0];
+
+// for(let i = 1; i < temperaturas.length; i++){
+//     if(temperaturas[i] > maior){
+//         maior = temperaturas[i]
+//     };
+//     if(temperaturas[i] < menor){
+//         menor = temperaturas[i]
+//     };
+// }
+
+// console.log(`Maior temperatura: ${maior}ºC`)
+// console.log(`Menor temperatura: ${menor}ºC`)
+
+
+
+// // console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -197,8 +215,21 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let menorIdade = 0;
+// let maiorIdade = 0;
 
-console.log("_______________________________");
+// for(let i = 0; i < idades.length; i++){
+//     if(idades[i] < 18){
+//         menorIdade++
+//     };
+//     if(idades[i] >= 18){
+//         maiorIdade++
+//     };
+// }
+
+// console.log(`A quantida de pessoas menor de idade é ${menorIdade} e maior de idade é ${maiorIdade}.`)
+
+// // console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -214,8 +245,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let somaSalarios = 0
+// let mediaSalarios;
 
-console.log("_______________________________");
+// for(let i = 0; i < salarios.length; i++){
+//     somaSalarios += salarios[i];
+//     };
+
+// mediaSalarios = somaSalarios / salarios.length
+// console.log(`\nMedia salarial: R$ ${mediaSalarios.toFixed(2)}`);
+
+// for(let i = 0; i < salarios.length; i++){
+//     if(salarios[i] <= mediaSalarios){
+//         console.log(`R$ ${salarios[i]} - Abaixo da média`)
+//     }else{
+//         console.log(`R$ ${salarios[i]} - Acima da média`)  
+//     };
+// };
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -238,7 +286,34 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-console.log("_______________________________");
+
+let turma = [
+    {nome: "", notas: []},
+    {nome: "", notas: []},
+    {nome: "", notas: []}
+]
+
+for(let i = 0; i < turma.length; i++){
+        let nome = lerTeclado.question(`Digite o nome do aluno ${i + 1}: `)
+            if(nome === ""){
+                console.log("Nome Invalido");
+                turma[i].nome = `Aluno${i + 1}`;
+                
+            }else{
+                turma[i].nome = nome
+            }
+
+        turma[i].notas.push(lerTeclado.questionFloat(`Digite a nota 1: `));
+        turma[i].notas.push(lerTeclado.questionFloat(`Digite a nota 2: `));
+        turma[i].notas.push(lerTeclado.questionFloat(`Digite a nota 3: `));
+                
+}
+
+
+
+
+
+// console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -257,4 +332,4 @@ console.log("_______________________________");
 // → Seu código aqui:
 
 
-console.log("_______________________________");
+// console.log("_______________________________");
