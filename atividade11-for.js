@@ -285,29 +285,30 @@ let lerTeclado = require('readline-sync')
 
 // → Seu código aqui:
 
+let qtdAlunos = 3
+let turma = []
+let somaNotas = 0
 
+for(let i = 0; i < qtdAlunos; i++){
+    const nomeAluno = lerTeclado.question(`Nome do aluno ${i + 1}: `);
+    const nota1 = lerTeclado.questionFloat(`Nota 1: `);
+    const nota2 = lerTeclado.questionFloat(`Nota 2: `);
+    const nota3 = lerTeclado.questionFloat(`Nota 3: `);
 
-let turma = [
-    {nome: "", notas: []},
-    {nome: "", notas: []},
-    {nome: "", notas: []}
-]
+    
+    turma.push(
+        {
+            nome: nomeAluno,
+            notas: [nota1,nota2,nota3]
+        }
+    );
 
-for(let i = 0; i < turma.length; i++){
-        let nome = lerTeclado.question(`Digite o nome do aluno ${i + 1}: `)
-            if(nome === ""){
-                console.log("Nome Invalido");
-                turma[i].nome = `Aluno${i + 1}`;
-                
-            }else{
-                turma[i].nome = nome
-            }
-
-        turma[i].notas.push(lerTeclado.questionFloat(`Digite a nota 1: `));
-        turma[i].notas.push(lerTeclado.questionFloat(`Digite a nota 2: `));
-        turma[i].notas.push(lerTeclado.questionFloat(`Digite a nota 3: `));
-                
+    somaNotas += nota1 + nota2 + nota3;
 }
+
+
+
+
 
 
 
