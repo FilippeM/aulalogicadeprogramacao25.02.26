@@ -285,26 +285,45 @@ let lerTeclado = require('readline-sync')
 
 // → Seu código aqui:
 
-let qtdAlunos = 3
-let turma = []
-let somaNotas = 0
+// let qtdAlunos = 3
+// let turma = []
+// let somaNotas = 0
+// let media = 0;
 
-for(let i = 0; i < qtdAlunos; i++){
-    const nomeAluno = lerTeclado.question(`Nome do aluno ${i + 1}: `);
-    const nota1 = lerTeclado.questionFloat(`Nota 1: `);
-    const nota2 = lerTeclado.questionFloat(`Nota 2: `);
-    const nota3 = lerTeclado.questionFloat(`Nota 3: `);
+// for(let i = 0; i < qtdAlunos; i++){
+//     let aluno = {
+//         nome: lerTeclado.question(`Nome do aluno ${i + 1}: `),
+//         notas: [
+//             lerTeclado.questionFloat(`Nota 1: `),
+//             lerTeclado.questionFloat(`Nota 2: `),
+//             lerTeclado.questionFloat(`Nota 3: `)
+//         ]
+//     }
 
+//     turma.push(aluno);
     
-    turma.push(
-        {
-            nome: nomeAluno,
-            notas: [nota1,nota2,nota3]
-        }
-    );
+//     somaNotas += aluno.notas[0] + aluno.notas[1] + aluno.notas[2];
+// }
 
-    somaNotas += nota1 + nota2 + nota3;
-}
+// media = somaNotas / qtdAlunos
+
+// for(let i = 0; i < qtdAlunos; i++){
+//     let situacao;
+//     let media;
+//     media = (turma[i].notas[0] + turma[i].notas[1] + turma[i].notas[2]) / 3
+//     if(media >= 7){
+//         situacao = "Aprovado"
+//     }else if(media >= 5 && media < 7){
+//         situacao = "Recuperacao"
+//     }else{
+//         situacao = "Reprovado"
+//     };
+
+//     console.log(`${turma[i].nome}: Nota: ${media.toFixed(1)} - Situacao: ${situacao}`);
+// }
+
+// console.log(`A media da turma: ${media.toFixed(1)}`)
+// console.table(turma)
 
 
 
@@ -331,6 +350,46 @@ for(let i = 0; i < qtdAlunos; i++){
 // f) Exiba o array com console.table().
 
 // → Seu código aqui:
+
+let qtdProdutos = lerTeclado.questionInt("Digite quantos produtos deseja cadastrar: ");
+let estoque = [];
+
+for(let i = 0; i < qtdProdutos; i++ ){
+    let produto = {
+        nome: lerTeclado.question("Digite o nome do produto: "),
+        preco: lerTeclado.questionFloat("Digite o preco do produto: ")
+    }
+
+    estoque.push(produto);
+}
+
+console.log("\n========== PRODUTOS ==========");
+for(let i = 0; i < qtdProdutos; i++ ){
+    console.log(`${estoque[i].nome}: R$ ${estoque[i].preco}`)
+}
+console.log("==============================");
+
+let maior = estoque[0].preco;
+let menor = estoque[0].preco;
+let nomeProdutoMaior = estoque[0].nome
+let nomeProdutoMenor = estoque[0].nome
+
+for(let i = 0; i < qtdProdutos; i++){
+    if(maior < estoque[i].preco){
+        maior = estoque[i].preco;
+        nomeProdutoMaior = estoque[i].nome
+    };
+
+    if(menor > estoque[i].preco){
+        menor = estoque[i].preco;
+        nomeProdutoMenor = estoque[i].nome
+    };
+}
+
+console.log(`O produto ${nomeProdutoMaior} é o  mais caro que custa: ${maior}`);
+console.log(`\nO produto ${nomeProdutoMenor} é o mais barato que custa: ${menor}`);
+
+console.table(estoque)
 
 
 // console.log("_______________________________");
