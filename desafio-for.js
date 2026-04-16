@@ -38,7 +38,7 @@ for(let i = 0; i < qtdMeses; i++){
     saldo = saldo * (1 + taxaJurosMensal / 100);
     console.log(`Mês ${i + 1}:  Saldo: R$${saldo.toFixed(2)}`);
     let mes = {
-        nome: mes.nomeMes,      //i + 1,
+        nome: null,   
         saldo: saldo.toFixed(2)
     };
     
@@ -52,40 +52,40 @@ for(let i = 0; i < qtdMeses; i++){
 
     switch(cont){
         case 0:
-            mes.nomeMes = "Janeiro"
+            mes.nome = "Janeiro"
         break;
         case 1:
-            mes.nomeMes = "Fevereiro"
+            mes.nome = "Fevereiro"
         break;
         case 2:
-            mes.nomeMes = "Março"
+            mes.nome = "Março"
         break;
         case 3:
-            mes.nomeMes = "Abril"
+            mes.nome = "Abril"
         break;
         case 4:
-            mes.nomeMes = "Maio"
+            mes.nome = "Maio"
         break;
         case 5:
-            mes.nomeMes = "Junho"
+            mes.nome = "Junho"
         break;
         case 6:
-            mes.nomeMes = "Julho"
+            mes.nome = "Julho"
         break;
         case 7:
-            mes.nomeMes = "Agosto"
+            mes.nome = "Agosto"
         break;
         case 8:
-            mes.nomeMes = "Setembro"
+            mes.nome = "Setembro"
         break;
         case 9:
-            mes.nomeMes = "Outubro"
+            mes.nome = "Outubro"
         break;
         case 10:
-            mes.nomeMes = "Novembro"
+            mes.nome = "Novembro"
         break;
         case 11:
-            mes.nomeMes = "Dezembro"
+            mes.nome = "Dezembro"
         break;
      }
 
