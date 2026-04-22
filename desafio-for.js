@@ -42,7 +42,7 @@ for(let i = 0; i < qtdMeses; i++){
         saldo: saldo.toFixed(2)
     };
     
-    if(cont > 11){
+    if(cont > 12){
         cont = 0
     }else{
         cont++
@@ -52,39 +52,42 @@ for(let i = 0; i < qtdMeses; i++){
 
     switch(cont){
         case 0:
-            mes.nome = "Janeiro"
+            mes.nome = ""
         break;
         case 1:
-            mes.nome = "Fevereiro"
+            mes.nome = "Janeiro"
         break;
         case 2:
-            mes.nome = "Março"
+            mes.nome = "Fevereiro"
         break;
         case 3:
-            mes.nome = "Abril"
+            mes.nome = "Março"
         break;
         case 4:
-            mes.nome = "Maio"
+            mes.nome = "Abril"
         break;
         case 5:
-            mes.nome = "Junho"
+            mes.nome = "Maio"
         break;
         case 6:
-            mes.nome = "Julho"
+            mes.nome = "Junho"
         break;
         case 7:
-            mes.nome = "Agosto"
+            mes.nome = "Julho"
         break;
         case 8:
-            mes.nome = "Setembro"
+            mes.nome = "Agosto"
         break;
         case 9:
-            mes.nome = "Outubro"
+            mes.nome = "Setembro"
         break;
         case 10:
-            mes.nome = "Novembro"
+            mes.nome = "Outubro"
         break;
         case 11:
+            mes.nome = "Novembro"
+        break;
+        case 12:
             mes.nome = "Dezembro"
         break;
      }
