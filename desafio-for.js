@@ -26,77 +26,77 @@ let lerTeclado = require('readline-sync')
 // → Seu código aqui:
 
 
-let saldo = lerTeclado.questionFloat("Digite o saldo inicial: ");
-let saldoInicial = saldo; 
-let taxaJurosMensal = lerTeclado.questionFloat("Digite o valor da taxa de juros mensal: ");
-let qtdMeses = lerTeclado.questionInt("Digite quantos meses pretende deixar o dinheiro aplicado: ");
-let anual = []
-let cont = 0
+// let saldo = lerTeclado.questionFloat("Digite o saldo inicial: ");
+// let saldoInicial = saldo; 
+// let taxaJurosMensal = lerTeclado.questionFloat("Digite o valor da taxa de juros mensal: ");
+// let qtdMeses = lerTeclado.questionInt("Digite quantos meses pretende deixar o dinheiro aplicado: ");
+// let anual = []
+// let cont = 0
 
 
-for(let i = 0; i < qtdMeses; i++){
-    saldo = saldo * (1 + taxaJurosMensal / 100);
-    console.log(`Mês ${i + 1}:  Saldo: R$${saldo.toFixed(2)}`);
-    let mes = {
-        nome: null,   
-        saldo: saldo.toFixed(2)
-    };
+// for(let i = 0; i < qtdMeses; i++){
+//     saldo = saldo * (1 + taxaJurosMensal / 100);
+//     console.log(`Mês ${i + 1}:  Saldo: R$${saldo.toFixed(2)}`);
+//     let mes = {
+//         nome: null,   
+//         saldo: saldo.toFixed(2)
+//     };
     
-    if(cont > 12){
-        cont = 0
-    }else{
-        cont++
-    };
+//     if(cont > 12){
+//         cont = 0
+//     }else{
+//         cont++
+//     };
     
 
 
-    switch(cont){
-        case 0:
-            mes.nome = ""
-        break;
-        case 1:
-            mes.nome = "Janeiro"
-        break;
-        case 2:
-            mes.nome = "Fevereiro"
-        break;
-        case 3:
-            mes.nome = "Março"
-        break;
-        case 4:
-            mes.nome = "Abril"
-        break;
-        case 5:
-            mes.nome = "Maio"
-        break;
-        case 6:
-            mes.nome = "Junho"
-        break;
-        case 7:
-            mes.nome = "Julho"
-        break;
-        case 8:
-            mes.nome = "Agosto"
-        break;
-        case 9:
-            mes.nome = "Setembro"
-        break;
-        case 10:
-            mes.nome = "Outubro"
-        break;
-        case 11:
-            mes.nome = "Novembro"
-        break;
-        case 12:
-            mes.nome = "Dezembro"
-        break;
-     }
+//     switch(cont){
+//         case 0:
+//             mes.nome = ""
+//         break;
+//         case 1:
+//             mes.nome = "Janeiro"
+//         break;
+//         case 2:
+//             mes.nome = "Fevereiro"
+//         break;
+//         case 3:
+//             mes.nome = "Março"
+//         break;
+//         case 4:
+//             mes.nome = "Abril"
+//         break;
+//         case 5:
+//             mes.nome = "Maio"
+//         break;
+//         case 6:
+//             mes.nome = "Junho"
+//         break;
+//         case 7:
+//             mes.nome = "Julho"
+//         break;
+//         case 8:
+//             mes.nome = "Agosto"
+//         break;
+//         case 9:
+//             mes.nome = "Setembro"
+//         break;
+//         case 10:
+//             mes.nome = "Outubro"
+//         break;
+//         case 11:
+//             mes.nome = "Novembro"
+//         break;
+//         case 12:
+//             mes.nome = "Dezembro"
+//         break;
+//      }
 
-    anual.push(mes)
-}
+//     anual.push(mes)
+// }
 
-console.log(`O saldo total é: ${saldo.toFixed(2)} | Lucro apos ${qtdMeses} meses: ${(saldo - saldoInicial).toFixed(2)}`);
-console.table(anual)
+// console.log(`O saldo total é: ${saldo.toFixed(2)} | Lucro apos ${qtdMeses} meses: ${(saldo - saldoInicial).toFixed(2)}`);
+// console.table(anual)
 
 
 
@@ -128,6 +128,37 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let quantidade  = lerTeclado.questionInt("Digite quantos alunos serao cadastrados: ")
+let qtdAlunos = quantidade;
+let turma = []
+
+for(let i = 0; i < qtdAlunos; i++){
+    let aluno = {
+        nome: lerTeclado.question(`Digite o nome do aluno ${i + 1}: `),
+        notas: [
+            lerTeclado.questionFloat(`Nota 1: `),
+            lerTeclado.questionFloat(`Nota 2: `),
+            lerTeclado.questionFloat(`Nota 3: `)
+        ]
+    };
+    let media = (aluno.notas[0] + aluno.notas[1] + aluno.notas[2]) / aluno.notas.length;
+    let situacao = ""
+
+    if(media >= 7){
+        situacao = "Aprovado"
+    }else if(media >= 5 && media < 7){
+        situacao = "Recuperação"
+    }else{
+        situacao = "Reprovado"
+    }
+    aluno.media = media;
+    aluno.situacao = situacao;    
+    turma.push(aluno);
+
+    console.log(`Nome: ${turma[i].nome} | Media: ${turma[i].media} | Situacao: ${turma[i].situacao}`)
+}
+
+//console.table(turma)
 
 console.log("_______________________________");
 

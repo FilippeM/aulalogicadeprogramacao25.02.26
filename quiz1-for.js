@@ -140,6 +140,15 @@ for(let i = 0; i < perguntas.length; i++){
     let resposta = lerTeclado.question("Digite sua resposta: ")
     let letra = resposta.toUpperCase();
 
+    switch(letra){
+      case perguntas[i].resposta:
+        console.log(`\nCorreto!`)
+        cont++
+        break;
+      default:
+        console.log(`\nErrado! A resposta correta era: ${perguntas[i].resposta}`)
+        break;
+    }
     
 }
 
@@ -173,6 +182,41 @@ console.log("\n_______________________________");
 //           { jogador, acertos, total, aproveitamento, classificacao }
 
 // → Seu código aqui:
+
+let aproveitamento = (cont / perguntas.length) * 100;
+let classificacao;
+
+if(aproveitamento === 100){
+    classificacao = "PERFEITO! Gênio!"
+}else if(aproveitamento < 100 && aproveitamento >= 75){
+    classificacao = "Excelente! Quase lá!"
+}else if(aproveitamento <= 74 && aproveitamento >= 50 ){
+    classificacao = "Bom! Você sabe bastante."
+}else if(aproveitamento <= 25 && aproveitamento >= 49){
+    classificacao = "Regular. Vale estudar mais."
+}else{
+    classificacao = "Fraco. Bora revisar o conteúdo!"
+};
+
+console.log(
+`\n==============================================="
+"| RESULTADO FINAL
+"| Jogador: ${nomePlayer}
+"| Acertos: ${cont}
+"| Aproveitamento: ${aproveitamento}%
+"| Classificação: ${classificacao}"
+"===============================================
+  `);
+
+let resultadoFinal = {}
+
+resultadoFinal.nome = nomePlayer
+resultadoFinal.pontos = cont
+resultadoFinal.aproveitamento = aproveitamento
+resultadoFinal.classificacao = classificacao
+
+console.table(resultadoFinal)
+
 
 
 console.log("\nObrigado por jogar!");
