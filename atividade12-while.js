@@ -113,22 +113,35 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let notas = []
-let nota = null
+// let notas = []
+// let nota = null
+// let media;
+// let somaNotas = 0
 
-while(nota !== -1 ){
-    nota = lerTeclado.questionFloat("Digite a nota: ");
-    if((nota <= 0 && nota !== -1) || nota > 10){
-        console.log("Nota invalida");
-        nota = lerTeclado.questionFloat("Digite a nota: ");
-    }else {
-        notas.push(nota)
-    }
-}
+// while(nota !== -1 ){
+//     nota = lerTeclado.questionFloat("Digite a nota: ");
+//     if((nota <= 0 && nota !== -1) || nota > 10){
+//         console.log("\nNota invalida\n");
+//         nota = lerTeclado.questionFloat("Digite a nota: ");
+//     }else {
+//         notas.push(nota);
+//     }
+// }
+
+// notas.pop()
+
+// for(let i  = 0; i < notas.length; i++){
+//     somaNotas += notas[i];
+// }
+
+
+// media = somaNotas / notas.length;
+
+// console.log(`\nA media do aluno é: ${media.toFixed(1)}\n`);
 
 
 
-console.table(notas);
+
 
 
 console.log("_______________________________");
@@ -145,6 +158,56 @@ console.log("_______________________________");
 // c) O menu deve repetir até o usuário escolher 0.
 
 // → Seu código aqui:
+
+// let opcao = null
+// let qtdCoins = 0
+// let opcaoContasPremmium = null
+
+// do{
+// const hora = new Date().toLocaleTimeString();
+// const data = new Date().toLocaleDateString();
+// console.log(`
+// =============== MENU ===============
+// 1 - Comprar Coins
+// 2 - Contas Premmium
+// 3 - Chave Pix
+// 4 - Referencias
+// 5 - Falar com atendente
+// 0 - Sair
+
+// Horario: ${hora} Data: ${data}
+// \n `);
+
+// opcao = lerTeclado.questionInt("Digite a opcao desejada: ");
+
+// switch(opcao){
+//     case 1:
+//         qtdCoins = lerTeclado.questionInt("\nQuantos coins deseja comprar: ");
+//         break;
+//     case 2:
+//         console.log("\n1 CONTA PLATINUM");
+//         console.log("2 CONTA GOLD");
+//         console.log("3 CONTA DIAMOND");
+//         opcaoContasPremmium = lerTeclado.questionInt("\nDigite qual o nivel da conta premmium que deseja: ")
+//         break;
+//     case 3:
+//         console.log("\nChave pix: 58222039000133");
+//         break;
+//     case 4:
+//         console.log("\nCoins International Corporation");
+//         break;
+//     case 5:
+//         console.log("\nAguarde um momento, estamos te direcionando para um de nossos atendentes... ");
+//         break;
+//     default:   
+        
+// }
+
+
+// }while  (opcao !== 0);
+
+// if(opcao === 0) console.log("\nAte Breve!!");
+
 
 
 console.log("_______________________________");
@@ -165,6 +228,33 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// const numeroAleatorio = Math.floor(Math.random() * (50 - 1) + 1);
+// const nomePlayer = lerTeclado.question("Digite seu nick: ")
+// let numeroJogador = null
+// let contadorTentativa = 0
+
+// console.log("\nTENTE ADIVINHAR O NUMERO SECRETO DE 1 A 50\n");
+
+// while(numeroJogador !== numeroAleatorio){
+//     numeroJogador = lerTeclado.questionInt("\nDigite seu palpite: ")
+//     if(numeroJogador <= 0 || numeroJogador > 50){
+//         console.log("\nNumero Invalido!!");
+        
+//     }else{
+//         if(numeroJogador > numeroAleatorio){
+//             console.log("\nMuito alto! Tente menor."); 
+//             contadorTentativa++;      
+//         }else if(numeroJogador < numeroAleatorio){
+//             console.log("\nMuito baixo! Tente maior."); 
+//             contadorTentativa++;
+//         }else{
+//             console.log(`\n${nomePlayer} acertou após ${contadorTentativa} tentativa(s)! O número era ${numeroAleatorio}.`);            
+//         };
+
+//     }
+    
+// }
+
 
 console.log("_______________________________");
 
@@ -177,6 +267,22 @@ console.log("_______________________________");
 //    Formato para exibição: "<número> x <i> = <resultado>"
 
 // → Seu código aqui:
+
+// const numeroUsuario = lerTeclado.questionInt("Digite um numero inteiro: ");
+// let i = 1
+// let resultado = null
+
+// if(numeroUsuario <= 0){
+//     console.log("\nNumero Invalido!!!");    
+// }else{
+//     while(i <= 10){
+//         resultado  = numeroUsuario * i;
+//         console.log(`${numeroUsuario} * ${i} = ${resultado}`);
+//         i++    
+//     };
+// };
+
+
 
 
 console.log("_______________________________");
@@ -194,6 +300,24 @@ console.log("_______________________________");
 // c) Ao final, exiba o saldo restante e o total de rodadas.
 
 // → Seu código aqui:
+
+let saldo = 1000
+let rodada = 0
+
+do{
+    let saque = Math.floor(Math.random() * (200 - 50)+50);
+    if(saque > saldo){
+        console.log("Saldo insuficiente.");        
+    }else{
+        saldo -= saque
+        console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`);        
+    };
+    rodada++
+
+}while(saldo > 0 && rodada < 10)
+
+console.log(`Saldo restante: ${saldo} | Total de rodadas: ${rodada}`);
+
 
 
 console.log("_______________________________");
