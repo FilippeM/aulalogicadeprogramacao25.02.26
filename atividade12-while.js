@@ -301,22 +301,25 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-let saldo = 1000
-let rodada = 0
+// let saldo = 1000
+// let rodada = 0
 
-do{
-    let saque = Math.floor(Math.random() * (200 - 50)+50);
-    if(saque > saldo){
-        console.log("Saldo insuficiente.");        
-    }else{
-        saldo -= saque
-        console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`);        
-    };
-    rodada++
+// do{
+//     let saque = Math.floor(Math.random() * (200 - 50)+50);
+//     console.log(`valor saque sorteado: ${saque}`);
+    
+//     if(saque > saldo){
+//         console.log("Saldo insuficiente.");
+//         break;        
+//     }else{
+//         saldo -= saque
+//         console.log(`Rodada ${rodada}: sacou R$ ${saque} | Novo saldo: R$ ${saldo}`);        
+//     };
+//     rodada++
 
-}while(saldo > 0 && rodada < 10)
+// }while(saldo > 0 && rodada < 10)
 
-console.log(`Saldo restante: ${saldo} | Total de rodadas: ${rodada}`);
+// console.log(`Saldo restante: ${saldo} | Total de rodadas: ${rodada}`);
 
 
 
@@ -336,6 +339,34 @@ console.log("_______________________________");
 // d) Exiba: "Total de contatos cadastrados: <qtd>"
 
 // → Seu código aqui:
+
+// let contatos = [];
+// let qtdContatosCadastrados = 0
+// let adicionarContato = null
+// do{
+    
+//     let nomeCadastro = lerTeclado.question("Digite seu nome: ");
+//     let telefoneCadastro = lerTeclado.questionInt("Digite seu telefone para contato: ")
+//     let cadastro = {
+//         nome: nomeCadastro,
+//         telefone: telefoneCadastro
+//     };
+
+//     contatos.push(cadastro);
+    
+//     adicionarContato = lerTeclado.keyInYN("Deseja adicionar outro contato?: [S/N] ");
+
+//     qtdContatosCadastrados++;
+
+// }while(adicionarContato);
+
+// console.table(contatos);
+// console.log(`Total de contatos cadastrados: ${qtdContatosCadastrados}`);
+
+
+
+
+
 
 
 console.log("_______________________________");
