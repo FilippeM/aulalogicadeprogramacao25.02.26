@@ -1,7 +1,7 @@
 // ============================================================
 //   ATIVIDADE 11 – Interrompendo Laços (break / continue / return)
 // ============================================================
-
+let lerTeclado = require('readline-sync')
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Break simples
 // ------------------------------------------------------------
@@ -37,7 +37,18 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// // let cont = 0 
 
+// // for(let i = 0;i < letras.length; i++){
+// //   if(letras[i] === "a" || letras[i] === "e" || letras[i] === "i" || letras[i] === "o" || letras[i] === "u"){
+// //     continue;
+// //   }else{
+// //     console.log(letras[i]);
+// //     cont++; 
+// //   };
+// // };
+
+// console.log(`Consoantes exibidas: ${cont}`);
 
 
 console.log("_______________________________");
@@ -48,7 +59,7 @@ console.log("_______________________________");
 // ------------------------------------------------------------
 // a) Dado o array de notas:
 const notasAlunoA = [8, 7, 6.2, 9, 5, 7.5, 9, 8.9, 2.2, 10, 7.4];
-const notasAlunoB = [8, 4.5, 6.3, 9];
+const notasAlunoB = [8, 5.4, 6.3, 9];
 
 // b) Percorra ambos os array com for - um for para cada array.
 //    Se encontrar uma nota menor que 5, retorne imediatamente a mensagem:
@@ -58,6 +69,32 @@ const notasAlunoB = [8, 4.5, 6.3, 9];
 
 // → Seu código aqui:
 
+// let reprovadoAlunoA = false
+// let reprovadoAlunoB = false
+
+// for(let i = 0; i < notasAlunoA.length; i++){
+//   if(notasAlunoA[i] < 5){
+//     console.log(`Reprovado na nota ${notasAlunoA[i]} (índice ${i})`);
+//     reprovadoAlunoA = true
+//     break;
+//   };    
+// };
+
+// if(reprovadoAlunoA === false){
+//   console.log("Aprovado!")
+// };
+
+// for(let i = 0; i < notasAlunoB.length; i++){
+//   if(notasAlunoB[i] < 5){
+//     console.log(`Reprovado na nota ${notasAlunoB[i]} (índice ${i})`);
+//     reprovadoAlunoB = true
+//     break;
+//   };  
+// };
+
+// if(reprovadoAlunoB === false){
+//   console.log("Aprovado!");    
+// };
 
 console.log("_______________________________");
 
@@ -74,6 +111,23 @@ console.log("_______________________________");
 //    "Você precisou de <tentativas> tentativa(s)."
 
 // → Seu código aqui:
+
+// let secret = "bitcoin"
+// let tentativa = null
+// let contTentativas = 0
+
+// while(tentativa !== secret){
+//   tentativa = lerTeclado.question("Tente adivinhar a palavra secreta: ")
+//   if(tentativa === secret){
+//     console.log("Parabéns! Você acertou!");
+//     break;
+//   }else{
+//     console.log("Errou! Tente novamente.");
+//     contTentativas++    
+//   };
+// };
+
+// console.log(`Você precisou de ${contTentativas} tentativa(s).`);
 
 
 console.log("_______________________________");
@@ -92,12 +146,32 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+// let inputNumero = null;
+// let acumulacao = 0;
+// let soma = 0;
+
+// while(inputNumero !== 0){
+//   inputNumero = lerTeclado.questionInt("Digite um numero: ");
+//   if(inputNumero <= 0){
+//     console.log("Ignorando numero negativo.");
+//     continue;    
+//   }else{
+//     acumulacao++
+//     soma += inputNumero
+//   };
+// };
+
+// console.log(`Soma dos positivos: ${soma}`);
+// console.log(`Quantidade de positivos: ${acumulacao}`);
+
+
+
 
 console.log("_______________________________");
 
 
 // ------------------------------------------------------------
-// EXERCÍCIO 6 – Return: busca em array de objetos
+// EXERCÍCIO 6  busca em array de objetos
 // ------------------------------------------------------------
 // a) Dado o array de alunos:
    const alunos = [
@@ -112,6 +186,19 @@ console.log("_______________________________");
 //    Se não houver, retorna null.
 
 // → Seu código aqui:
+
+let alunoReprovado = [];
+
+for(let i = 0 ;i < alunos.length; i++){
+  if(alunos[i].nota < 5){
+    alunoReprovado.push(alunos[i].nome)
+    break;
+  }else{
+    alunoReprovado.push(null)
+  };
+};
+
+console.log(alunoReprovado);
 
 
 console.log("_______________________________");
