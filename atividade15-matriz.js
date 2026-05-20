@@ -2,7 +2,7 @@
 //   ATIVIDADE 13 – Estruturas de Dados: Matriz
 // ============================================================
 
-
+let lerTeclado = require(`readline-sync`)
 // ------------------------------------------------------------
 // EXERCÍCIO 1 – Lendo uma matriz
 // ------------------------------------------------------------
@@ -92,31 +92,32 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
-const m = [
-[12,  7, 25],
-[ 3, 18,  9],
-[31, 14, 22],
-];
+// const m = [
+// [12,  7, 25],
+// [ 3, 18,  9],
+// [31, 14, 22],
+// ];
 
-let maior = m[0][0];
-let menor = m[0][0];
+// let maior = m[0][0];
+// let menor = m[0][0];
+// let localMaior = null;
+// let localMenor = null;
 
+// for(let i = 0; i < m.length; i++){
+//     for(let j = 0; j < m[i].length; j++){
+//         if(maior < m[i][j]){
+//             maior = m[i][j];
+//             localMaior = `Linha: ${i} Coluna: ${j}`
+//         };
+//         if(menor > m[i][j]){
+//             menor = m[i][j];
+//             localMenor = `Linha: ${i} Coluna: ${j}`        
+//         };
+//     };
+// };
 
-for(let i = 0; i < m.length; i++){
-    for(let j = 0; j < m[i].length; j++){
-        if(maior < m[i][j]){
-            maior = m[i][j];
-            enderecoMaior = m[i][j];
-        };
-        if(menor > m[i][j]){
-            menor = m[i][j];
-            enderecoMenor = m[i][j];
-        };
-    };
-};
-
-console.log(`O maior numero da matriz é: ${maior}`);
-console.log(`O menor numero da matriz é: ${menor}`);
+// // console.log(`O maior numero da matriz é: ${maior} | Local: ${localMaior}`);
+// // console.log(`O menor numero da matriz é: ${menor} | Local: ${localMenor}`);
 
 
 console.log("_______________________________");
@@ -132,6 +133,46 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+const m = [
+    [12,  7, 25,  9],
+    [ 3, 18,  9, 12],
+    [31, 14, 22, 55],
+    [1,   1,  2,  5]
+];
+
+for(let i = 0; i < m.length ; i++ ){
+    let somaLinha = 0;
+    for(let j = 0; j < m[i].length; j++){
+        somaLinha += m[i][j];
+    };
+    
+    console.log(`Linha: ${i} | Soma: ${somaLinha} `);    
+};
+
+for (let j = 0; j < m[0].length ; j++ ){
+    let somaColuna = 0;
+    for(let i = 0; i < m.length; i++){
+        somaColuna += m[i][j];
+    };
+
+    console.log(`Coluna: ${j} | Soma: ${somaColuna}`);    
+};
+
+let somaDiagonal = 0;
+
+for(let i = 0; i < m.length; i++){
+    for(let j = 0; j < m[0].length; j++){
+        if(i === j){
+            somaDiagonal += m[i][j]
+        };
+    };  
+    
+};
+
+console.log(`Soma da diagonal: ${somaDiagonal}`);
+
+
+
 
 console.log("_______________________________");
 
@@ -146,5 +187,19 @@ console.log("_______________________________");
 
 // → Seu código aqui:
 
+let qtdLinhas = null;
+let qtdColunas = null;
+let matriz = [];
+
+console.log("CONFIGURE UMA MATRIZ QUE TENHA A MESMA QUANTIDADE DE LINHAS E COLUNAS\n");
+
+qtdLinhas = lerTeclado.questionInt("Digite a quantidade de linhas da matriz: ");
+qtdColunas = lerTeclado.questionInt("Digite a quantidade de colunas da matriz: ");
+
+for(let i = 0; i < matriz.length; i++){
+    for(let j = 0; j < matriz[i].length; j++){
+
+    };
+};
 
 console.log("_______________________________");
